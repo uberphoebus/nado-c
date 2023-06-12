@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 int main(void) {
 
@@ -32,6 +34,34 @@ int main(void) {
             }
             printf("%d stdudent be ready\n", i);
         }
+    }
+
+    // rock, scissors, paper
+    int out = rand() % 3;
+    if (out == 0) {
+        printf("rock\n");
+    } else if (out == 1) {
+        printf("scissors\n");
+    } else {
+        printf("paper\n");
+    }
+
+    // switch
+    srand(time(NULL));
+    int out2 = rand() % 3;
+    switch (out2) {
+        case 0:
+            printf("rock\n");
+            break;
+        case 1:
+            printf("scissors\n");
+            break;
+        case 2:
+            printf("paper\n");
+            break;
+        default:
+            printf("error\n");
+            break;
     }
 
     return 0;
