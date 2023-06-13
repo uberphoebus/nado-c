@@ -10,10 +10,9 @@ void fail();
 int main(void) {
     srand(time(NULL));
     int count = 0;
-    for (int i = 0; i < 5; i++) {
+    for (int i = 1; i < 5; i++) {
         int num1 = getRandomNumber(i);
         int num2 = getRandomNumber(i);
-        printf("%d x %d = ?", num1, num2);
         showQuestion(i, num1, num2);
         int answer = -1;
         scanf("%d", &answer);
@@ -38,14 +37,14 @@ int getRandomNumber(int level) {
 }
 
 void showQuestion(int level, int num1, int num2) {
-    printf("\n\n\n####### #%d question #######\n", level);
-    printf("%d x %d = ?\n\n", num1, num2);
-    printf("#######################\n");
+    printf("\n\n####### #%2d question #######\n\n", level);
+    printf("      %d x %d = ?\n\n", num1, num2);
+    printf("#############################\n");
     printf("enter the answer: (exit: -1)");
 }
 
 void success() {
-    printf("\n\n\n########## success ##########\n");
+    printf("\n\n\n########## success ##########\n\n\n\n");
 }
 
 void fail() {
